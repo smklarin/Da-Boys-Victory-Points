@@ -4,6 +4,8 @@ The ESPN API returns some logo URLs that browsers cannot reliably hotlink from
 GitHub Pages. This script downloads each team's current logo using the same
 ESPN session cookies available to GitHub Actions, stores it under
 assets/team-logos/, and rewrites dashboard JSON logo fields to use local paths.
+If a remote host blocks automated downloading, an existing local team-<id>.*
+asset is preserved and used as the fallback.
 """
 
 from __future__ import annotations
@@ -42,6 +44,14 @@ def guess_extension(content_type: str | None, url: str) -> str:
 
     guessed = mimetypes.guess_extension(content_type) if content_type else None
     return guessed or ".img"
+
+
+def existing_local_logo(team_id: int) -> str | None:
+    for ext in (".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif"):
+        path = LOGO_DIR / f"team-{team_id}{ext}"
+        if path.exists():
+            return f"./assets/team-logos/{path.name}"
+    return None
 
 
 def download_logo(url: str, team_id: int, swid: str, espn_s2: str) -> str | None:
@@ -120,15 +130,20 @@ def main() -> int:
             continue
 
         local_path = download_logo(logo_url, team_id, swid, espn_s2)
+        if not local_path:
+            local_path = existing_local_logo(team_id)
+            if local_path:
+                print(f"Using existing local fallback for team {team_id}: {local_path}")
+
         if local_path:
             local_logos[team_id] = local_path
-            print(f"Cached team {team_id} logo -> {local_path}")
+            print(f"Resolved team {team_id} logo -> {local_path}")
 
     rewrite_processed_json(local_logos)
-    print(f"Cached {len(local_logos)} team logos.")
+    print(f"Resolved {len(local_logos)} team logos.")
 
     if not local_logos:
-        raise RuntimeError("No team logos could be cached")
+        raise RuntimeError("No team logos could be resolved")
 
     return 0
 

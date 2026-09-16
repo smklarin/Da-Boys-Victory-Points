@@ -16,7 +16,7 @@
     "weeklyMinimumVP": 0
   },
   "sync": {
-    "syncedAt": "2026-09-16T14:45:41.717407Z",
+    "syncedAt": "2026-09-16T14:50:31.375681Z",
     "espnCurrentMatchupPeriod": 2,
     "espnLatestScoringPeriod": 2,
     "finalizedThroughWeek": 1,
@@ -62,7 +62,7 @@
       "teamId": 9,
       "teamName": "Beauty and the Claude",
       "abbrev": "BUNB",
-      "logo": "https://comicvine.gamespot.com/images/1300-1709422",
+      "logo": "./assets/team-logos/team-9.svg",
       "vpRank": 1,
       "vpRankChange": null,
       "totalVP": 4,
@@ -397,7 +397,7 @@
           "teamId": 9,
           "teamName": "Beauty and the Claude",
           "abbrev": "BUNB",
-          "logo": "https://comicvine.gamespot.com/images/1300-1709422",
+          "logo": "./assets/team-logos/team-9.svg",
           "points": 201.22,
           "opponentId": 5,
           "opponentName": "Snow White And The CD Lambs",

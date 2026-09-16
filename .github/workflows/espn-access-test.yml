@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/espn-access-test.yml'
       - 'scripts/validate_espn_data.py'
+      - 'scripts/calculate_victory_points.py'
   workflow_dispatch:
 
 jobs:
@@ -21,3 +22,6 @@ jobs:
 
       - name: Validate ESPN team and matchup data
         run: python scripts/validate_espn_data.py
+
+      - name: Calculate Week 1 Victory Points
+        run: python scripts/calculate_victory_points.py --week 1

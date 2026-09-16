@@ -47,7 +47,8 @@ def guess_extension(content_type: str | None, url: str) -> str:
 
 
 def existing_local_logo(team_id: int) -> str | None:
-    for ext in (".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif"):
+    # Prefer ordinary raster files over SVG wrappers for maximum browser/GitHub compatibility.
+    for ext in (".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg"):
         path = LOGO_DIR / f"team-{team_id}{ext}"
         if path.exists():
             return f"./assets/team-logos/{path.name}"

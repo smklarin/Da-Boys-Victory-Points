@@ -1,6 +1,10 @@
 name: ESPN Access Test
 
 on:
+  push:
+    paths:
+      - '.github/workflows/espn-access-test.yml'
+      - 'scripts/validate_espn_data.py'
   workflow_dispatch:
 
 jobs:

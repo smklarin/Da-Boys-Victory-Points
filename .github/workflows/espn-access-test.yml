@@ -36,7 +36,7 @@ jobs:
       - name: Commit sanitized dashboard data
         shell: bash
         run: |
-          if git diff --quiet -- data/; then
+          if [ -z "$(git status --porcelain -- data/)" ]; then
             echo "No processed data changes to commit."
             exit 0
           fi

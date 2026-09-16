@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-authenticated-access:
+  validate-espn-data:
     runs-on: ubuntu-latest
 
     env:
@@ -12,98 +12,8 @@ jobs:
       ESPN_S2: ${{ secrets.ESPN_S2 }}
 
     steps:
-      - name: Test authenticated ESPN league access
-        shell: python
-        run: |
-          import json
-          import os
-          import urllib.error
-          import urllib.request
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-          swid = os.environ.get("ESPN_SWID", "")
-          espn_s2 = os.environ.get("ESPN_S2", "")
-
-          if not swid or not espn_s2:
-              print("SECRETS_PRESENT=false")
-              raise SystemExit(1)
-
-          print("SECRETS_PRESENT=true")
-
-          url = (
-              "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/"
-              "seasons/2026/segments/0/leagues/1289630"
-              "?view=mTeam&view=mMatchup&view=mMatchupScore&view=mSettings"
-          )
-
-          req = urllib.request.Request(
-              url,
-              headers={
-                  "User-Agent": "Mozilla/5.0",
-                  "Accept": "application/json",
-                  "Cookie": f"SWID={swid}; espn_s2={espn_s2}",
-              },
-          )
-
-          try:
-              with urllib.request.urlopen(req, timeout=30) as response:
-                  status = response.status
-                  body = response.read()
-
-              print(f"HTTP_STATUS={status}")
-
-              data = json.loads(body)
-
-              teams = data.get("teams")
-              schedule = data.get("schedule")
-              settings = data.get("settings")
-
-              print("JSON_OK=true")
-              print(f"LEAGUE_ID={data.get('id')}")
-              print(f"SEASON_ID={data.get('seasonId')}")
-              print(f"TEAMS_AVAILABLE={isinstance(teams, list)}")
-              print(f"TEAM_COUNT={len(teams) if isinstance(teams, list) else 0}")
-              print(f"SCHEDULE_AVAILABLE={isinstance(schedule, list)}")
-              print(f"SCHEDULE_COUNT={len(schedule) if isinstance(schedule, list) else 0}")
-              print(f"SETTINGS_AVAILABLE={isinstance(settings, dict)}")
-
-              scored_matchups = 0
-              periods = set()
-
-              if isinstance(schedule, list):
-                  for matchup in schedule:
-                      home = matchup.get("home") or {}
-                      away = matchup.get("away") or {}
-
-                      if (
-                          isinstance(home.get("totalPoints"), (int, float))
-                          and isinstance(away.get("totalPoints"), (int, float))
-                      ):
-                          scored_matchups += 1
-                          period = matchup.get("matchupPeriodId")
-                          if period is not None:
-                              periods.add(period)
-
-              print(f"SCORED_MATCHUPS_AVAILABLE={scored_matchups > 0}")
-              print(f"SCORED_MATCHUP_COUNT={scored_matchups}")
-              print(
-                  "MATCHUP_PERIODS_WITH_SCORES="
-                  + ",".join(str(x) for x in sorted(periods))
-              )
-
-              if (
-                  status == 200
-                  and data.get("id") == 1289630
-                  and isinstance(teams, list)
-                  and len(teams) > 0
-                  and isinstance(schedule, list)
-                  and len(schedule) > 0
-              ):
-                  print("AUTHENTICATED_ACCESS_TEST=PASS")
-              else:
-                  print("AUTHENTICATED_ACCESS_TEST=FAIL")
-                  raise SystemExit(1)
-
-          except urllib.error.HTTPError as exc:
-              print(f"HTTP_STATUS={exc.code}")
-              print("AUTHENTICATED_ACCESS_TEST=FAIL")
-              raise
+      - name: Validate ESPN team and matchup data
+        run: python scripts/validate_espn_data.py

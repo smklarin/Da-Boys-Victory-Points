@@ -1,0 +1,552 @@
+{
+  "league": {
+    "leagueId": 1289630,
+    "season": 2026,
+    "teamCount": 10,
+    "regularSeasonWeeks": 14
+  },
+  "rules": {
+    "matchupWinVP": 2,
+    "scoringVP": {
+      "ranks1to3": 2,
+      "ranks4to6": 1,
+      "ranks7to10": 0
+    },
+    "weeklyMaximumVP": 4,
+    "weeklyMinimumVP": 0
+  },
+  "sync": {
+    "syncedAt": "2026-09-16T13:51:38.308014Z",
+    "espnCurrentMatchupPeriod": 2,
+    "espnLatestScoringPeriod": 2,
+    "finalizedThroughWeek": 1,
+    "nextUnfinalizedWeek": 2
+  },
+  "standingsNote": "VP rank uses Victory Points only. Points For is used only as a deterministic display order when VP totals are tied; no official standings tiebreaker has been encoded yet.",
+  "standings": [
+    {
+      "teamId": 11,
+      "teamName": "Titoana",
+      "abbrev": "Tito",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/2db38220-a0c0-11f1-b987-2730e362696d",
+      "vpRank": 1,
+      "vpRankChange": null,
+      "totalVP": 4,
+      "record": "1-0",
+      "wins": 1,
+      "losses": 0,
+      "pointsFor": 219.76,
+      "pointsAgainst": 125.62,
+      "pointsForRank": 1,
+      "matchupVP": 2,
+      "scoringVP": 2,
+      "fourVPWeeks": 1,
+      "zeroVPWeeks": 0,
+      "averageScoringRank": 1.0,
+      "averageWeeklyVP": 4.0,
+      "weeklyVP": [
+        4
+      ],
+      "weeklyScores": [
+        219.76
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 4,
+          "vpRank": 1
+        }
+      ]
+    },
+    {
+      "teamId": 9,
+      "teamName": "Beauty and the Claude",
+      "abbrev": "BUNB",
+      "logo": "https://comicvine.gamespot.com/images/1300-1709422",
+      "vpRank": 1,
+      "vpRankChange": null,
+      "totalVP": 4,
+      "record": "1-0",
+      "wins": 1,
+      "losses": 0,
+      "pointsFor": 201.22,
+      "pointsAgainst": 167.14,
+      "pointsForRank": 2,
+      "matchupVP": 2,
+      "scoringVP": 2,
+      "fourVPWeeks": 1,
+      "zeroVPWeeks": 0,
+      "averageScoringRank": 2.0,
+      "averageWeeklyVP": 4.0,
+      "weeklyVP": [
+        4
+      ],
+      "weeklyScores": [
+        201.22
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 4,
+          "vpRank": 1
+        }
+      ]
+    },
+    {
+      "teamId": 4,
+      "teamName": "Burrow and the Beast",
+      "abbrev": "BtB",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/b7d4e050-acac-11f1-9672-7f9d2428aa84",
+      "vpRank": 1,
+      "vpRankChange": null,
+      "totalVP": 4,
+      "record": "1-0",
+      "wins": 1,
+      "losses": 0,
+      "pointsFor": 175.5,
+      "pointsAgainst": 139.5,
+      "pointsForRank": 3,
+      "matchupVP": 2,
+      "scoringVP": 2,
+      "fourVPWeeks": 1,
+      "zeroVPWeeks": 0,
+      "averageScoringRank": 3.0,
+      "averageWeeklyVP": 4.0,
+      "weeklyVP": [
+        4
+      ],
+      "weeklyScores": [
+        175.5
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 4,
+          "vpRank": 1
+        }
+      ]
+    },
+    {
+      "teamId": 6,
+      "teamName": "Amon-Ra-Punzel",
+      "abbrev": "REGS",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/RalphBreaksTheInternet/ralph-06.svg",
+      "vpRank": 4,
+      "vpRankChange": null,
+      "totalVP": 3,
+      "record": "1-0",
+      "wins": 1,
+      "losses": 0,
+      "pointsFor": 150.08,
+      "pointsAgainst": 146.06,
+      "pointsForRank": 5,
+      "matchupVP": 2,
+      "scoringVP": 1,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 0,
+      "averageScoringRank": 5.0,
+      "averageWeeklyVP": 3.0,
+      "weeklyVP": [
+        3
+      ],
+      "weeklyScores": [
+        150.08
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 3,
+          "vpRank": 4
+        }
+      ]
+    },
+    {
+      "teamId": 10,
+      "teamName": "Moana Money, Moana Problems",
+      "abbrev": "JKol",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/1e5f3200-a0c6-11f1-ac91-bfb4f119dcb9",
+      "vpRank": 5,
+      "vpRankChange": null,
+      "totalVP": 2,
+      "record": "1-0",
+      "wins": 1,
+      "losses": 0,
+      "pointsFor": 128.88,
+      "pointsAgainst": 116.14,
+      "pointsForRank": 8,
+      "matchupVP": 2,
+      "scoringVP": 0,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 0,
+      "averageScoringRank": 8.0,
+      "averageWeeklyVP": 2.0,
+      "weeklyVP": [
+        2
+      ],
+      "weeklyScores": [
+        128.88
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 2,
+          "vpRank": 5
+        }
+      ]
+    },
+    {
+      "teamId": 5,
+      "teamName": "Snow White And The CD Lambs",
+      "abbrev": "JRO",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/5aa56090-aa71-11f1-9537-5bd778d76252",
+      "vpRank": 6,
+      "vpRankChange": null,
+      "totalVP": 1,
+      "record": "0-1",
+      "wins": 0,
+      "losses": 1,
+      "pointsFor": 167.14,
+      "pointsAgainst": 201.22,
+      "pointsForRank": 4,
+      "matchupVP": 0,
+      "scoringVP": 1,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 0,
+      "averageScoringRank": 4.0,
+      "averageWeeklyVP": 1.0,
+      "weeklyVP": [
+        1
+      ],
+      "weeklyScores": [
+        167.14
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 1,
+          "vpRank": 6
+        }
+      ]
+    },
+    {
+      "teamId": 2,
+      "teamName": "Tommy Too Tangled",
+      "abbrev": "TTT",
+      "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
+      "vpRank": 6,
+      "vpRankChange": null,
+      "totalVP": 1,
+      "record": "0-1",
+      "wins": 0,
+      "losses": 1,
+      "pointsFor": 146.06,
+      "pointsAgainst": 150.08,
+      "pointsForRank": 6,
+      "matchupVP": 0,
+      "scoringVP": 1,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 0,
+      "averageScoringRank": 6.0,
+      "averageWeeklyVP": 1.0,
+      "weeklyVP": [
+        1
+      ],
+      "weeklyScores": [
+        146.06
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 1,
+          "vpRank": 6
+        }
+      ]
+    },
+    {
+      "teamId": 1,
+      "teamName": "The Magic Carpet Eaters",
+      "abbrev": "TMCM",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/47f943b0-ac08-11f1-bc05-dd37ff031f6c",
+      "vpRank": 8,
+      "vpRankChange": null,
+      "totalVP": 0,
+      "record": "0-1",
+      "wins": 0,
+      "losses": 1,
+      "pointsFor": 139.5,
+      "pointsAgainst": 175.5,
+      "pointsForRank": 7,
+      "matchupVP": 0,
+      "scoringVP": 0,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 1,
+      "averageScoringRank": 7.0,
+      "averageWeeklyVP": 0.0,
+      "weeklyVP": [
+        0
+      ],
+      "weeklyScores": [
+        139.5
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 0,
+          "vpRank": 8
+        }
+      ]
+    },
+    {
+      "teamId": 3,
+      "teamName": "The Little Mer-Maye",
+      "abbrev": "RonB",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/d1c26310-a87a-11f1-9537-5bd778d76252",
+      "vpRank": 8,
+      "vpRankChange": null,
+      "totalVP": 0,
+      "record": "0-1",
+      "wins": 0,
+      "losses": 1,
+      "pointsFor": 125.62,
+      "pointsAgainst": 219.76,
+      "pointsForRank": 9,
+      "matchupVP": 0,
+      "scoringVP": 0,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 1,
+      "averageScoringRank": 9.0,
+      "averageWeeklyVP": 0.0,
+      "weeklyVP": [
+        0
+      ],
+      "weeklyScores": [
+        125.62
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 0,
+          "vpRank": 8
+        }
+      ]
+    },
+    {
+      "teamId": 8,
+      "teamName": "Bo-laf's Warm Hugs",
+      "abbrev": "NIX",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/3fa96e00-a150-11f1-9ea5-d574bdafef15",
+      "vpRank": 8,
+      "vpRankChange": null,
+      "totalVP": 0,
+      "record": "0-1",
+      "wins": 0,
+      "losses": 1,
+      "pointsFor": 116.14,
+      "pointsAgainst": 128.88,
+      "pointsForRank": 10,
+      "matchupVP": 0,
+      "scoringVP": 0,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 1,
+      "averageScoringRank": 10.0,
+      "averageWeeklyVP": 0.0,
+      "weeklyVP": [
+        0
+      ],
+      "weeklyScores": [
+        116.14
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 0,
+          "vpRank": 8
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "leagueId": 1289630,
+      "season": 2026,
+      "week": 1,
+      "top3Cutoff": 175.5,
+      "top6Cutoff": 146.06,
+      "matchupVPTotal": 10,
+      "scoringVPTotal": 9,
+      "leagueVPTotal": 19,
+      "teams": [
+        {
+          "teamId": 11,
+          "teamName": "Titoana",
+          "abbrev": "Tito",
+          "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/2db38220-a0c0-11f1-b987-2730e362696d",
+          "points": 219.76,
+          "opponentId": 3,
+          "opponentName": "The Little Mer-Maye",
+          "opponentPoints": 125.62,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 1,
+          "scoringVP": 2,
+          "weeklyVP": 4,
+          "cumulativeVP": 4,
+          "cumulativeVPRank": 1
+        },
+        {
+          "teamId": 9,
+          "teamName": "Beauty and the Claude",
+          "abbrev": "BUNB",
+          "logo": "https://comicvine.gamespot.com/images/1300-1709422",
+          "points": 201.22,
+          "opponentId": 5,
+          "opponentName": "Snow White And The CD Lambs",
+          "opponentPoints": 167.14,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 2,
+          "scoringVP": 2,
+          "weeklyVP": 4,
+          "cumulativeVP": 4,
+          "cumulativeVPRank": 1
+        },
+        {
+          "teamId": 4,
+          "teamName": "Burrow and the Beast",
+          "abbrev": "BtB",
+          "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/b7d4e050-acac-11f1-9672-7f9d2428aa84",
+          "points": 175.5,
+          "opponentId": 1,
+          "opponentName": "The Magic Carpet Eaters",
+          "opponentPoints": 139.5,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 3,
+          "scoringVP": 2,
+          "weeklyVP": 4,
+          "cumulativeVP": 4,
+          "cumulativeVPRank": 1
+        },
+        {
+          "teamId": 5,
+          "teamName": "Snow White And The CD Lambs",
+          "abbrev": "JRO",
+          "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/5aa56090-aa71-11f1-9537-5bd778d76252",
+          "points": 167.14,
+          "opponentId": 9,
+          "opponentName": "Beauty and the Claude",
+          "opponentPoints": 201.22,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 4,
+          "scoringVP": 1,
+          "weeklyVP": 1,
+          "cumulativeVP": 1,
+          "cumulativeVPRank": 6
+        },
+        {
+          "teamId": 6,
+          "teamName": "Amon-Ra-Punzel",
+          "abbrev": "REGS",
+          "logo": "https://g.espncdn.com/lm-static/logo-packs/core/RalphBreaksTheInternet/ralph-06.svg",
+          "points": 150.08,
+          "opponentId": 2,
+          "opponentName": "Tommy Too Tangled",
+          "opponentPoints": 146.06,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 5,
+          "scoringVP": 1,
+          "weeklyVP": 3,
+          "cumulativeVP": 3,
+          "cumulativeVPRank": 4
+        },
+        {
+          "teamId": 2,
+          "teamName": "Tommy Too Tangled",
+          "abbrev": "TTT",
+          "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
+          "points": 146.06,
+          "opponentId": 6,
+          "opponentName": "Amon-Ra-Punzel",
+          "opponentPoints": 150.08,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 6,
+          "scoringVP": 1,
+          "weeklyVP": 1,
+          "cumulativeVP": 1,
+          "cumulativeVPRank": 6
+        },
+        {
+          "teamId": 1,
+          "teamName": "The Magic Carpet Eaters",
+          "abbrev": "TMCM",
+          "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/47f943b0-ac08-11f1-bc05-dd37ff031f6c",
+          "points": 139.5,
+          "opponentId": 4,
+          "opponentName": "Burrow and the Beast",
+          "opponentPoints": 175.5,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 7,
+          "scoringVP": 0,
+          "weeklyVP": 0,
+          "cumulativeVP": 0,
+          "cumulativeVPRank": 8
+        },
+        {
+          "teamId": 10,
+          "teamName": "Moana Money, Moana Problems",
+          "abbrev": "JKol",
+          "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/1e5f3200-a0c6-11f1-ac91-bfb4f119dcb9",
+          "points": 128.88,
+          "opponentId": 8,
+          "opponentName": "Bo-laf's Warm Hugs",
+          "opponentPoints": 116.14,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 8,
+          "scoringVP": 0,
+          "weeklyVP": 2,
+          "cumulativeVP": 2,
+          "cumulativeVPRank": 5
+        },
+        {
+          "teamId": 3,
+          "teamName": "The Little Mer-Maye",
+          "abbrev": "RonB",
+          "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/d1c26310-a87a-11f1-9537-5bd778d76252",
+          "points": 125.62,
+          "opponentId": 11,
+          "opponentName": "Titoana",
+          "opponentPoints": 219.76,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 9,
+          "scoringVP": 0,
+          "weeklyVP": 0,
+          "cumulativeVP": 0,
+          "cumulativeVPRank": 8
+        },
+        {
+          "teamId": 8,
+          "teamName": "Bo-laf's Warm Hugs",
+          "abbrev": "NIX",
+          "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/3fa96e00-a150-11f1-9ea5-d574bdafef15",
+          "points": 116.14,
+          "opponentId": 10,
+          "opponentName": "Moana Money, Moana Problems",
+          "opponentPoints": 128.88,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 10,
+          "scoringVP": 0,
+          "weeklyVP": 0,
+          "cumulativeVP": 0,
+          "cumulativeVPRank": 8
+        }
+      ]
+    }
+  ]
+}

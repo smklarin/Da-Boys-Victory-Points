@@ -7,6 +7,7 @@ on:
       - 'scripts/validate_espn_data.py'
       - 'scripts/calculate_victory_points.py'
       - 'scripts/process_season.py'
+      - 'scripts/cache_team_logos.py'
   workflow_dispatch:
 
 permissions:
@@ -33,16 +34,19 @@ jobs:
       - name: Process finalized season data
         run: python scripts/process_season.py
 
-      - name: Commit sanitized dashboard data
+      - name: Cache ESPN team logos
+        run: python scripts/cache_team_logos.py
+
+      - name: Commit sanitized dashboard data and logos
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- data/)" ]; then
-            echo "No processed data changes to commit."
+          if [ -z "$(git status --porcelain -- data/ assets/team-logos/)" ]; then
+            echo "No processed data or logo changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git commit -m "Update ESPN Victory Points data"
+          git add data/ assets/team-logos/
+          git commit -m "Update ESPN Victory Points data and team logos"
           git push

@@ -12,6 +12,7 @@ import json
 import mimetypes
 import os
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -35,7 +36,7 @@ def guess_extension(content_type: str | None, url: str) -> str:
     if content_type == "image/webp":
         return ".webp"
 
-    ext = Path(urllib.request.urlparse(url).path).suffix.lower() if hasattr(urllib.request, "urlparse") else ""
+    ext = Path(urllib.parse.urlparse(url).path).suffix.lower()
     if ext in {".svg", ".jpg", ".jpeg", ".png", ".gif", ".webp"}:
         return ".jpg" if ext == ".jpeg" else ext
 

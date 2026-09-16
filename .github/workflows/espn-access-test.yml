@@ -1,72 +1,109 @@
 name: ESPN Access Test
 
 on:
-  push:
-    paths:
-      - '.github/workflows/espn-access-test.yml'
   workflow_dispatch:
 
 jobs:
-  test-public-access:
+  test-authenticated-access:
     runs-on: ubuntu-latest
+
+    env:
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+
     steps:
-      - name: Test unauthenticated ESPN league access
+      - name: Test authenticated ESPN league access
         shell: python
         run: |
           import json
+          import os
           import urllib.error
           import urllib.request
 
+          swid = os.environ.get("ESPN_SWID", "")
+          espn_s2 = os.environ.get("ESPN_S2", "")
+
+          if not swid or not espn_s2:
+              print("SECRETS_PRESENT=false")
+              raise SystemExit(1)
+
+          print("SECRETS_PRESENT=true")
+
           url = (
-              'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/'
-              'seasons/2026/segments/0/leagues/1289630'
-              '?view=mTeam&view=mMatchup&view=mSettings'
+              "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/"
+              "seasons/2026/segments/0/leagues/1289630"
+              "?view=mTeam&view=mMatchup&view=mMatchupScore&view=mSettings"
           )
 
           req = urllib.request.Request(
               url,
               headers={
-                  'User-Agent': 'Mozilla/5.0',
-                  'Accept': 'application/json',
+                  "User-Agent": "Mozilla/5.0",
+                  "Accept": "application/json",
+                  "Cookie": f"SWID={swid}; espn_s2={espn_s2}",
               },
           )
 
           try:
-              with urllib.request.urlopen(req, timeout=20) as response:
+              with urllib.request.urlopen(req, timeout=30) as response:
                   status = response.status
                   body = response.read()
 
-              print(f'HTTP_STATUS={status}')
-              try:
-                  data = json.loads(body)
-              except json.JSONDecodeError:
-                  print('JSON_OK=false')
-                  raise SystemExit(1)
+              print(f"HTTP_STATUS={status}")
 
-              teams = data.get('teams')
-              schedule = data.get('schedule')
-              settings = data.get('settings')
+              data = json.loads(body)
 
-              print('JSON_OK=true')
-              print(f'LEAGUE_ID={data.get("id")}')
-              print(f'SEASON_ID={data.get("seasonId")}')
-              print(f'TEAMS_AVAILABLE={isinstance(teams, list)}')
-              print(f'TEAM_COUNT={len(teams) if isinstance(teams, list) else 0}')
-              print(f'SCHEDULE_AVAILABLE={isinstance(schedule, list)}')
-              print(f'SCHEDULE_COUNT={len(schedule) if isinstance(schedule, list) else 0}')
-              print(f'SETTINGS_AVAILABLE={isinstance(settings, dict)}')
+              teams = data.get("teams")
+              schedule = data.get("schedule")
+              settings = data.get("settings")
 
-              if status == 200 and isinstance(teams, list) and isinstance(schedule, list):
-                  print('PUBLIC_ACCESS_TEST=PASS')
+              print("JSON_OK=true")
+              print(f"LEAGUE_ID={data.get('id')}")
+              print(f"SEASON_ID={data.get('seasonId')}")
+              print(f"TEAMS_AVAILABLE={isinstance(teams, list)}")
+              print(f"TEAM_COUNT={len(teams) if isinstance(teams, list) else 0}")
+              print(f"SCHEDULE_AVAILABLE={isinstance(schedule, list)}")
+              print(f"SCHEDULE_COUNT={len(schedule) if isinstance(schedule, list) else 0}")
+              print(f"SETTINGS_AVAILABLE={isinstance(settings, dict)}")
+
+              scored_matchups = 0
+              periods = set()
+
+              if isinstance(schedule, list):
+                  for matchup in schedule:
+                      home = matchup.get("home") or {}
+                      away = matchup.get("away") or {}
+
+                      if (
+                          isinstance(home.get("totalPoints"), (int, float))
+                          and isinstance(away.get("totalPoints"), (int, float))
+                      ):
+                          scored_matchups += 1
+                          period = matchup.get("matchupPeriodId")
+                          if period is not None:
+                              periods.add(period)
+
+              print(f"SCORED_MATCHUPS_AVAILABLE={scored_matchups > 0}")
+              print(f"SCORED_MATCHUP_COUNT={scored_matchups}")
+              print(
+                  "MATCHUP_PERIODS_WITH_SCORES="
+                  + ",".join(str(x) for x in sorted(periods))
+              )
+
+              if (
+                  status == 200
+                  and data.get("id") == 1289630
+                  and isinstance(teams, list)
+                  and len(teams) > 0
+                  and isinstance(schedule, list)
+                  and len(schedule) > 0
+              ):
+                  print("AUTHENTICATED_ACCESS_TEST=PASS")
               else:
-                  print('PUBLIC_ACCESS_TEST=FAIL')
+                  print("AUTHENTICATED_ACCESS_TEST=FAIL")
                   raise SystemExit(1)
 
           except urllib.error.HTTPError as exc:
-              print(f'HTTP_STATUS={exc.code}')
-              print('PUBLIC_ACCESS_TEST=FAIL')
-              raise SystemExit(1)
-          except urllib.error.URLError as exc:
-              print(f'NETWORK_ERROR={exc.reason}')
-              print('PUBLIC_ACCESS_TEST=FAIL')
-              raise SystemExit(1)
+              print(f"HTTP_STATUS={exc.code}")
+              print("AUTHENTICATED_ACCESS_TEST=FAIL")
+              raise

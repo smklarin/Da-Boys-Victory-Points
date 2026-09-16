@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Da Boys Victory Points social preview">
+  <rect width="1200" height="630" fill="#0b1220"/>
+  <rect x="48" y="48" width="1104" height="534" rx="42" fill="#151f31" stroke="#26344b" stroke-width="2"/>
+  <rect x="48" y="48" width="1104" height="11" rx="5" fill="#f4b942"/>
+  <rect x="90" y="140" width="330" height="330" rx="70" fill="#101827" stroke="#f4b942" stroke-width="5"/>
+  <text x="255" y="335" text-anchor="middle" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="128" font-weight="700">VP</text>
+  <path d="M188 385 L220 358 L255 385 L290 358 L322 385 L305 408 L205 408 Z" fill="#f4b942"/>
+  <text x="485" y="180" fill="#f4b942" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">DA BOYS</text>
+  <text x="485" y="265" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Victory Points</text>
+  <text x="485" y="330" fill="#9fb0c7" font-family="Arial, Helvetica, sans-serif" font-size="34">2026 Fantasy Football Dashboard</text>
+  <rect x="485" y="386" width="155" height="50" rx="20" fill="#101827" stroke="#52d6b8" stroke-width="2"/>
+  <text x="562" y="420" text-anchor="middle" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">+2 WIN</text>
+  <rect x="654" y="386" width="178" height="50" rx="20" fill="#101827" stroke="#f4b942" stroke-width="2"/>
+  <text x="743" y="420" text-anchor="middle" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">+2 TOP 3</text>
+  <rect x="846" y="386" width="228" height="50" rx="20" fill="#101827" stroke="#ef6a78" stroke-width="2"/>
+  <text x="960" y="420" text-anchor="middle" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">+1 RANK 4–6</text>
+  <text x="485" y="505" fill="#6ea8fe" font-family="Arial, Helvetica, sans-serif" font-size="28">Weekly results • standings • scoring trends</text>
+</svg>

@@ -1,4 +1,4 @@
-name: ESPN Access Test
+name: ESPN Data Pipeline
 
 on:
   push:
@@ -6,10 +6,14 @@ on:
       - '.github/workflows/espn-access-test.yml'
       - 'scripts/validate_espn_data.py'
       - 'scripts/calculate_victory_points.py'
+      - 'scripts/process_season.py'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  validate-espn-data:
+  process-espn-data:
     runs-on: ubuntu-latest
 
     env:
@@ -23,5 +27,22 @@ jobs:
       - name: Validate ESPN team and matchup data
         run: python scripts/validate_espn_data.py
 
-      - name: Calculate Week 1 Victory Points
+      - name: Calculate Week 1 Victory Points audit
         run: python scripts/calculate_victory_points.py --week 1
+
+      - name: Process finalized season data
+        run: python scripts/process_season.py
+
+      - name: Commit sanitized dashboard data
+        shell: bash
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No processed data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Update ESPN Victory Points data"
+          git push

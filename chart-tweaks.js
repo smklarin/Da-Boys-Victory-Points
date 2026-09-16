@@ -10,6 +10,78 @@ function weeklyScoringBoundaries(week) {
   };
 }
 
+function applyScoringZonePalette() {
+  // Keep matchup outcomes and scoring tiers visually distinct:
+  // winner = green, loss = blue, +2 VP = gold, +1 VP = purple, +0 VP = gray.
+  const twoVpSwatch = document.querySelector('.zone-two');
+  const oneVpSwatch = document.querySelector('.zone-one');
+  const zeroVpSwatch = document.querySelector('.zone-zero');
+
+  if (twoVpSwatch) twoVpSwatch.style.background = 'rgba(244,185,66,.90)';
+  if (oneVpSwatch) oneVpSwatch.style.background = 'rgba(177,140,255,.90)';
+  if (zeroVpSwatch) zeroVpSwatch.style.background = 'rgba(159,176,199,.45)';
+}
+
+// Override the original scoring-zone drawing palette from app.js while
+// preserving the same plugin registration and midpoint boundaries.
+scoringZonesPlugin.beforeDraw = function beforeDraw(chart, args, opts) {
+  if (!opts?.top3 || !opts?.top6) return;
+  const { ctx, chartArea, scales } = chart;
+  if (!chartArea) return;
+
+  const y = scales.y;
+  const yTop3 = y.getPixelForValue(opts.top3);
+  const yTop6 = y.getPixelForValue(opts.top6);
+
+  ctx.save();
+
+  // +2 scoring VP zone: gold
+  ctx.fillStyle = 'rgba(244,185,66,.085)';
+  ctx.fillRect(
+    chartArea.left,
+    chartArea.top,
+    chartArea.right - chartArea.left,
+    yTop3 - chartArea.top,
+  );
+
+  // +1 scoring VP zone: purple
+  ctx.fillStyle = 'rgba(177,140,255,.070)';
+  ctx.fillRect(
+    chartArea.left,
+    yTop3,
+    chartArea.right - chartArea.left,
+    yTop6 - yTop3,
+  );
+
+  // +0 scoring VP zone: neutral gray
+  ctx.fillStyle = 'rgba(159,176,199,.025)';
+  ctx.fillRect(
+    chartArea.left,
+    yTop6,
+    chartArea.right - chartArea.left,
+    chartArea.bottom - yTop6,
+  );
+
+  ctx.setLineDash([6, 5]);
+  ctx.lineWidth = 1;
+
+  // Boundary between +2 and +1 scoring VP
+  ctx.strokeStyle = 'rgba(244,185,66,.80)';
+  ctx.beginPath();
+  ctx.moveTo(chartArea.left, yTop3);
+  ctx.lineTo(chartArea.right, yTop3);
+  ctx.stroke();
+
+  // Boundary between +1 and +0 scoring VP
+  ctx.strokeStyle = 'rgba(177,140,255,.76)';
+  ctx.beginPath();
+  ctx.moveTo(chartArea.left, yTop6);
+  ctx.lineTo(chartArea.right, yTop6);
+  ctx.stroke();
+
+  ctx.restore();
+};
+
 function ensureMatchupOutcomeLegend() {
   const legend = document.querySelector('.zone-legend');
   if (!legend || document.querySelector('.matchup-outcome-legend')) return;
@@ -26,6 +98,7 @@ function ensureMatchupOutcomeLegend() {
 }
 
 function setMatchupLegendVisibility() {
+  applyScoringZonePalette();
   ensureMatchupOutcomeLegend();
   document.querySelectorAll('.matchup-outcome-legend').forEach((item) => {
     item.style.display = chartMode === 'matchup' ? 'inline-flex' : 'none';

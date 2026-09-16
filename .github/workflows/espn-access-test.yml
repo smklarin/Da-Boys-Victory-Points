@@ -1,0 +1,72 @@
+name: ESPN Access Test
+
+on:
+  push:
+    paths:
+      - '.github/workflows/espn-access-test.yml'
+  workflow_dispatch:
+
+jobs:
+  test-public-access:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test unauthenticated ESPN league access
+        shell: python
+        run: |
+          import json
+          import urllib.error
+          import urllib.request
+
+          url = (
+              'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/'
+              'seasons/2026/segments/0/leagues/1289630'
+              '?view=mTeam&view=mMatchup&view=mSettings'
+          )
+
+          req = urllib.request.Request(
+              url,
+              headers={
+                  'User-Agent': 'Mozilla/5.0',
+                  'Accept': 'application/json',
+              },
+          )
+
+          try:
+              with urllib.request.urlopen(req, timeout=20) as response:
+                  status = response.status
+                  body = response.read()
+
+              print(f'HTTP_STATUS={status}')
+              try:
+                  data = json.loads(body)
+              except json.JSONDecodeError:
+                  print('JSON_OK=false')
+                  raise SystemExit(1)
+
+              teams = data.get('teams')
+              schedule = data.get('schedule')
+              settings = data.get('settings')
+
+              print('JSON_OK=true')
+              print(f'LEAGUE_ID={data.get("id")}')
+              print(f'SEASON_ID={data.get("seasonId")}')
+              print(f'TEAMS_AVAILABLE={isinstance(teams, list)}')
+              print(f'TEAM_COUNT={len(teams) if isinstance(teams, list) else 0}')
+              print(f'SCHEDULE_AVAILABLE={isinstance(schedule, list)}')
+              print(f'SCHEDULE_COUNT={len(schedule) if isinstance(schedule, list) else 0}')
+              print(f'SETTINGS_AVAILABLE={isinstance(settings, dict)}')
+
+              if status == 200 and isinstance(teams, list) and isinstance(schedule, list):
+                  print('PUBLIC_ACCESS_TEST=PASS')
+              else:
+                  print('PUBLIC_ACCESS_TEST=FAIL')
+                  raise SystemExit(1)
+
+          except urllib.error.HTTPError as exc:
+              print(f'HTTP_STATUS={exc.code}')
+              print('PUBLIC_ACCESS_TEST=FAIL')
+              raise SystemExit(1)
+          except urllib.error.URLError as exc:
+              print(f'NETWORK_ERROR={exc.reason}')
+              print('PUBLIC_ACCESS_TEST=FAIL')
+              raise SystemExit(1)

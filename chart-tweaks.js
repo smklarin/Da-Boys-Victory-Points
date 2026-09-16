@@ -12,13 +12,13 @@ function weeklyScoringBoundaries(week) {
 
 function applyScoringZonePalette() {
   // Keep matchup outcomes and scoring tiers visually distinct:
-  // winner = green, loss = blue, +2 VP = gold, +1 VP = purple, +0 VP = gray.
+  // winner = green, loss = blue, +2 VP = gold, +1 VP = coral, +0 VP = gray.
   const twoVpSwatch = document.querySelector('.zone-two');
   const oneVpSwatch = document.querySelector('.zone-one');
   const zeroVpSwatch = document.querySelector('.zone-zero');
 
   if (twoVpSwatch) twoVpSwatch.style.background = 'rgba(244,185,66,.90)';
-  if (oneVpSwatch) oneVpSwatch.style.background = 'rgba(177,140,255,.90)';
+  if (oneVpSwatch) oneVpSwatch.style.background = 'rgba(239,106,120,.90)';
   if (zeroVpSwatch) zeroVpSwatch.style.background = 'rgba(159,176,199,.45)';
 }
 
@@ -44,8 +44,8 @@ scoringZonesPlugin.beforeDraw = function beforeDraw(chart, args, opts) {
     yTop3 - chartArea.top,
   );
 
-  // +1 scoring VP zone: purple
-  ctx.fillStyle = 'rgba(177,140,255,.070)';
+  // +1 scoring VP zone: coral
+  ctx.fillStyle = 'rgba(239,106,120,.065)';
   ctx.fillRect(
     chartArea.left,
     yTop3,
@@ -73,7 +73,7 @@ scoringZonesPlugin.beforeDraw = function beforeDraw(chart, args, opts) {
   ctx.stroke();
 
   // Boundary between +1 and +0 scoring VP
-  ctx.strokeStyle = 'rgba(177,140,255,.76)';
+  ctx.strokeStyle = 'rgba(239,106,120,.76)';
   ctx.beginPath();
   ctx.moveTo(chartArea.left, yTop6);
   ctx.lineTo(chartArea.right, yTop6);

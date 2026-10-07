@@ -9,10 +9,16 @@ on:
       - 'scripts/process_season.py'
       - 'scripts/cache_team_logos.py'
   schedule:
-    # Run both possible UTC equivalents of 7:07 AM Central so DST is covered.
-    # If GitHub delays a scheduled run, the pipeline still runs when it arrives.
+    # Multiple retry slots during the 7 AM Central hour.
+    # 12 UTC is 7 AM CDT; 13 UTC is 7 AM CST.
     - cron: '7 12 * * 3'
+    - cron: '22 12 * * 3'
+    - cron: '37 12 * * 3'
+    - cron: '52 12 * * 3'
     - cron: '7 13 * * 3'
+    - cron: '22 13 * * 3'
+    - cron: '37 13 * * 3'
+    - cron: '52 13 * * 3'
   workflow_dispatch:
 
 permissions:
@@ -27,22 +33,52 @@ jobs:
       ESPN_S2: ${{ secrets.ESPN_S2 }}
 
     steps:
+      - name: Select correct Central-time schedule
+        id: schedule_guard
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "run_pipeline=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CENTRAL_OFFSET="$(TZ=America/Chicago date +%z)"
+          SCHEDULE="${{ github.event.schedule }}"
+          CRON_HOUR="$(printf '%s\n' "$SCHEDULE" | awk '{print $2}')"
+
+          echo "Central UTC offset: $CENTRAL_OFFSET"
+          echo "Triggered cron: $SCHEDULE"
+
+          if [ "$CENTRAL_OFFSET" = "-0500" ] && [ "$CRON_HOUR" = "12" ]; then
+            echo "run_pipeline=true" >> "$GITHUB_OUTPUT"
+          elif [ "$CENTRAL_OFFSET" = "-0600" ] && [ "$CRON_HOUR" = "13" ]; then
+            echo "run_pipeline=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run_pipeline=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Check out repository
+        if: steps.schedule_guard.outputs.run_pipeline == 'true'
         uses: actions/checkout@v4
 
       - name: Validate ESPN team and matchup data
+        if: steps.schedule_guard.outputs.run_pipeline == 'true'
         run: python scripts/validate_espn_data.py
 
       - name: Calculate Week 1 Victory Points audit
+        if: steps.schedule_guard.outputs.run_pipeline == 'true'
         run: python scripts/calculate_victory_points.py --week 1
 
       - name: Process finalized season data
+        if: steps.schedule_guard.outputs.run_pipeline == 'true'
         run: python scripts/process_season.py
 
       - name: Cache ESPN team logos
+        if: steps.schedule_guard.outputs.run_pipeline == 'true'
         run: python scripts/cache_team_logos.py
 
       - name: Commit sanitized dashboard data and logos
+        if: steps.schedule_guard.outputs.run_pipeline == 'true'
         shell: bash
         run: |
           if [ -z "$(git status --porcelain -- data/ assets/team-logos/)" ]; then

@@ -1,0 +1,78 @@
+{
+  "leagueId": 1289630,
+  "season": 2026,
+  "week": 5,
+  "finalized": true,
+  "matchups": [
+    {
+      "week": 5,
+      "winner": "HOME",
+      "home": {
+        "teamId": 6,
+        "teamName": "Amon-Ra-Punzel",
+        "points": 136.44
+      },
+      "away": {
+        "teamId": 10,
+        "teamName": "Moana Money, Moana Problems",
+        "points": 135.76
+      }
+    },
+    {
+      "week": 5,
+      "winner": "AWAY",
+      "home": {
+        "teamId": 1,
+        "teamName": "The Magic Carpet Eaters",
+        "points": 171.42
+      },
+      "away": {
+        "teamId": 2,
+        "teamName": "Tommy Too Tangled",
+        "points": 227.7
+      }
+    },
+    {
+      "week": 5,
+      "winner": "AWAY",
+      "home": {
+        "teamId": 9,
+        "teamName": "Beauty and the Claude",
+        "points": 159.86
+      },
+      "away": {
+        "teamId": 4,
+        "teamName": "Burrow and the Beast",
+        "points": 204.04
+      }
+    },
+    {
+      "week": 5,
+      "winner": "AWAY",
+      "home": {
+        "teamId": 11,
+        "teamName": "Titoana",
+        "points": 148.36
+      },
+      "away": {
+        "teamId": 5,
+        "teamName": "Snow White And The CD Lambs",
+        "points": 150.32
+      }
+    },
+    {
+      "week": 5,
+      "winner": "AWAY",
+      "home": {
+        "teamId": 8,
+        "teamName": "Bo-laf's Warm Hugs",
+        "points": 114.96
+      },
+      "away": {
+        "teamId": 3,
+        "teamName": "The Little Mer-Maye",
+        "points": 178.9
+      }
+    }
+  ]
+}

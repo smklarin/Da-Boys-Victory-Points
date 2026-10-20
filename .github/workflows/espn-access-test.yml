@@ -1,4 +1,5 @@
 name: ESPN Data Pipeline
+# On-demand refresh requested October 20, 2026.
 
 on:
   push:

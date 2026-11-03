@@ -1,0 +1,78 @@
+{
+  "leagueId": 1289630,
+  "season": 2026,
+  "week": 8,
+  "finalized": true,
+  "matchups": [
+    {
+      "week": 8,
+      "winner": "HOME",
+      "home": {
+        "teamId": 10,
+        "teamName": "Moana Money, Moana Problems",
+        "points": 148.52
+      },
+      "away": {
+        "teamId": 5,
+        "teamName": "Snow White And The CD Lambs",
+        "points": 86.66
+      }
+    },
+    {
+      "week": 8,
+      "winner": "AWAY",
+      "home": {
+        "teamId": 3,
+        "teamName": "The Little Mer-Maye",
+        "points": 123.36
+      },
+      "away": {
+        "teamId": 4,
+        "teamName": "Burrow and the Beast",
+        "points": 205.32
+      }
+    },
+    {
+      "week": 8,
+      "winner": "HOME",
+      "home": {
+        "teamId": 8,
+        "teamName": "Bo-laf's Warm Hugs",
+        "points": 146.12
+      },
+      "away": {
+        "teamId": 2,
+        "teamName": "Tommy Too Tangled",
+        "points": 140.16
+      }
+    },
+    {
+      "week": 8,
+      "winner": "AWAY",
+      "home": {
+        "teamId": 11,
+        "teamName": "Titoana",
+        "points": 81.76
+      },
+      "away": {
+        "teamId": 6,
+        "teamName": "Amon-Ra-Punzel",
+        "points": 111.34
+      }
+    },
+    {
+      "week": 8,
+      "winner": "HOME",
+      "home": {
+        "teamId": 9,
+        "teamName": "Beauty and the Claude",
+        "points": 188.34
+      },
+      "away": {
+        "teamId": 1,
+        "teamName": "The Magic Carpet Eaters",
+        "points": 165.76
+      }
+    }
+  ]
+}

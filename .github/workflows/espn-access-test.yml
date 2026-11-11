@@ -25,6 +25,11 @@ on:
 permissions:
   contents: write
 
+# Serialize retry slots so simultaneous runs cannot race when pushing data.
+concurrency:
+  group: espn-data-pipeline
+  cancel-in-progress: false
+
 jobs:
   process-espn-data:
     runs-on: ubuntu-latest
@@ -73,6 +78,40 @@ jobs:
       - name: Process finalized season data
         if: steps.schedule_guard.outputs.run_pipeline == 'true'
         run: python scripts/process_season.py
+
+      - name: Verify fresh and complete ESPN standings
+        if: steps.schedule_guard.outputs.run_pipeline == 'true'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path("data/processed/2026.json")
+          data = json.loads(path.read_text())
+          sync = data["sync"]
+          updated = datetime.fromisoformat(sync["syncedAt"].replace("Z", "+00:00"))
+          age = (datetime.now(timezone.utc) - updated).total_seconds()
+          assert 0 <= age < 1800, f"Stale sync timestamp: {sync['syncedAt']}"
+          finalized = sync["finalizedThroughWeek"]
+          current = sync["espnCurrentMatchupPeriod"]
+          assert isinstance(finalized, int) and finalized >= 1
+          assert len(data["standings"]) == 10, "Expected ten teams in standings"
+          assert len(data["weeks"]) == finalized, "Missing finalized weekly results"
+          assert all(len(row["weeklyVP"]) == finalized for row in data["standings"])
+          if isinstance(current, int) and 1 < current <= data["league"]["regularSeasonWeeks"]:
+              assert finalized >= current - 1, (
+                  f"ESPN says current matchup period {current}, but only Week {finalized} is finalized"
+              )
+          previous = json.loads(subprocess.check_output(
+              ["git", "show", "HEAD:data/processed/2026.json"], text=True
+          ))
+          old_week = previous["sync"]["finalizedThroughWeek"]
+          assert finalized >= old_week, f"Finalized week regressed from {old_week} to {finalized}"
+          print(f"Verified fresh ESPN sync: finalized Week {finalized}; current matchup Week {current}")
+          PY
 
       - name: Cache ESPN team logos
         if: steps.schedule_guard.outputs.run_pipeline == 'true'

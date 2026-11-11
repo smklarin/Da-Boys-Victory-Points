@@ -16,200 +16,34 @@
     "weeklyMinimumVP": 0
   },
   "sync": {
-    "syncedAt": "2026-11-04T20:34:32.725508Z",
-    "espnCurrentMatchupPeriod": 9,
-    "espnLatestScoringPeriod": 9,
-    "finalizedThroughWeek": 8,
-    "nextUnfinalizedWeek": 9
+    "syncedAt": "2026-11-11T04:44:10.367917Z",
+    "espnCurrentMatchupPeriod": 10,
+    "espnLatestScoringPeriod": 10,
+    "finalizedThroughWeek": 9,
+    "nextUnfinalizedWeek": 10
   },
   "standingsNote": "VP rank uses Victory Points only. Points For is used only as a deterministic display order when VP totals are tied; no official standings tiebreaker has been encoded yet.",
   "standings": [
-    {
-      "teamId": 11,
-      "teamName": "Titoana",
-      "abbrev": "Tito",
-      "logo": "./assets/team-logos/team-11.jpg",
-      "vpRank": 1,
-      "vpRankChange": 0,
-      "totalVP": 22,
-      "record": "6-2",
-      "wins": 6,
-      "losses": 2,
-      "pointsFor": 1246.82,
-      "pointsAgainst": 987.68,
-      "pointsForRank": 3,
-      "matchupVP": 12,
-      "scoringVP": 10,
-      "fourVPWeeks": 5,
-      "zeroVPWeeks": 2,
-      "averageScoringRank": 4.5,
-      "averageWeeklyVP": 2.75,
-      "weeklyVP": [
-        4,
-        4,
-        4,
-        4,
-        0,
-        4,
-        2,
-        0
-      ],
-      "weeklyScores": [
-        219.76,
-        162.38,
-        170.48,
-        175.58,
-        148.36,
-        157.98,
-        130.52,
-        81.76
-      ],
-      "rankHistory": [
-        {
-          "week": 1,
-          "vp": 4,
-          "vpRank": 1
-        },
-        {
-          "week": 2,
-          "vp": 8,
-          "vpRank": 1
-        },
-        {
-          "week": 3,
-          "vp": 12,
-          "vpRank": 1
-        },
-        {
-          "week": 4,
-          "vp": 16,
-          "vpRank": 1
-        },
-        {
-          "week": 5,
-          "vp": 16,
-          "vpRank": 1
-        },
-        {
-          "week": 6,
-          "vp": 20,
-          "vpRank": 1
-        },
-        {
-          "week": 7,
-          "vp": 22,
-          "vpRank": 1
-        },
-        {
-          "week": 8,
-          "vp": 22,
-          "vpRank": 1
-        }
-      ]
-    },
-    {
-      "teamId": 9,
-      "teamName": "Beauty and the Claude",
-      "abbrev": "BUNB",
-      "logo": "./assets/team-logos/team-9.jpg",
-      "vpRank": 2,
-      "vpRankChange": 1,
-      "totalVP": 20,
-      "record": "5-3",
-      "wins": 5,
-      "losses": 3,
-      "pointsFor": 1330.94,
-      "pointsAgainst": 1161.26,
-      "pointsForRank": 1,
-      "matchupVP": 10,
-      "scoringVP": 10,
-      "fourVPWeeks": 4,
-      "zeroVPWeeks": 2,
-      "averageScoringRank": 4.25,
-      "averageWeeklyVP": 2.5,
-      "weeklyVP": [
-        4,
-        4,
-        3,
-        0,
-        1,
-        4,
-        0,
-        4
-      ],
-      "weeklyScores": [
-        201.22,
-        207.26,
-        155.44,
-        132.62,
-        159.86,
-        169.0,
-        117.2,
-        188.34
-      ],
-      "rankHistory": [
-        {
-          "week": 1,
-          "vp": 4,
-          "vpRank": 1
-        },
-        {
-          "week": 2,
-          "vp": 8,
-          "vpRank": 1
-        },
-        {
-          "week": 3,
-          "vp": 11,
-          "vpRank": 2
-        },
-        {
-          "week": 4,
-          "vp": 11,
-          "vpRank": 2
-        },
-        {
-          "week": 5,
-          "vp": 12,
-          "vpRank": 4
-        },
-        {
-          "week": 6,
-          "vp": 16,
-          "vpRank": 3
-        },
-        {
-          "week": 7,
-          "vp": 16,
-          "vpRank": 3
-        },
-        {
-          "week": 8,
-          "vp": 20,
-          "vpRank": 2
-        }
-      ]
-    },
     {
       "teamId": 4,
       "teamName": "Burrow and the Beast",
       "abbrev": "BtB",
       "logo": "./assets/team-logos/team-4.jpg",
-      "vpRank": 2,
+      "vpRank": 1,
       "vpRankChange": 1,
-      "totalVP": 20,
-      "record": "5-3",
-      "wins": 5,
+      "totalVP": 24,
+      "record": "6-3",
+      "wins": 6,
       "losses": 3,
-      "pointsFor": 1293.06,
-      "pointsAgainst": 1185.14,
-      "pointsForRank": 2,
-      "matchupVP": 10,
-      "scoringVP": 10,
-      "fourVPWeeks": 4,
+      "pointsFor": 1483.5,
+      "pointsAgainst": 1316.0,
+      "pointsForRank": 1,
+      "matchupVP": 12,
+      "scoringVP": 12,
+      "fourVPWeeks": 5,
       "zeroVPWeeks": 2,
-      "averageScoringRank": 4.5,
-      "averageWeeklyVP": 2.5,
+      "averageScoringRank": 4.11,
+      "averageWeeklyVP": 2.67,
       "weeklyVP": [
         4,
         3,
@@ -218,6 +52,7 @@
         4,
         0,
         1,
+        4,
         4
       ],
       "weeklyScores": [
@@ -228,7 +63,8 @@
         204.04,
         98.6,
         133.7,
-        205.32
+        205.32,
+        190.44
       ],
       "rankHistory": [
         {
@@ -270,6 +106,191 @@
           "week": 8,
           "vp": 20,
           "vpRank": 2
+        },
+        {
+          "week": 9,
+          "vp": 24,
+          "vpRank": 1
+        }
+      ]
+    },
+    {
+      "teamId": 11,
+      "teamName": "Titoana",
+      "abbrev": "Tito",
+      "logo": "./assets/team-logos/team-11.jpg",
+      "vpRank": 2,
+      "vpRankChange": -1,
+      "totalVP": 22,
+      "record": "6-3",
+      "wins": 6,
+      "losses": 3,
+      "pointsFor": 1377.68,
+      "pointsAgainst": 1178.12,
+      "pointsForRank": 5,
+      "matchupVP": 12,
+      "scoringVP": 10,
+      "fourVPWeeks": 5,
+      "zeroVPWeeks": 3,
+      "averageScoringRank": 4.78,
+      "averageWeeklyVP": 2.44,
+      "weeklyVP": [
+        4,
+        4,
+        4,
+        4,
+        0,
+        4,
+        2,
+        0,
+        0
+      ],
+      "weeklyScores": [
+        219.76,
+        162.38,
+        170.48,
+        175.58,
+        148.36,
+        157.98,
+        130.52,
+        81.76,
+        130.86
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 4,
+          "vpRank": 1
+        },
+        {
+          "week": 2,
+          "vp": 8,
+          "vpRank": 1
+        },
+        {
+          "week": 3,
+          "vp": 12,
+          "vpRank": 1
+        },
+        {
+          "week": 4,
+          "vp": 16,
+          "vpRank": 1
+        },
+        {
+          "week": 5,
+          "vp": 16,
+          "vpRank": 1
+        },
+        {
+          "week": 6,
+          "vp": 20,
+          "vpRank": 1
+        },
+        {
+          "week": 7,
+          "vp": 22,
+          "vpRank": 1
+        },
+        {
+          "week": 8,
+          "vp": 22,
+          "vpRank": 1
+        },
+        {
+          "week": 9,
+          "vp": 22,
+          "vpRank": 2
+        }
+      ]
+    },
+    {
+      "teamId": 9,
+      "teamName": "Beauty and the Claude",
+      "abbrev": "BUNB",
+      "logo": "./assets/team-logos/team-9.jpg",
+      "vpRank": 3,
+      "vpRankChange": -1,
+      "totalVP": 20,
+      "record": "5-4",
+      "wins": 5,
+      "losses": 4,
+      "pointsFor": 1452.36,
+      "pointsAgainst": 1332.64,
+      "pointsForRank": 2,
+      "matchupVP": 10,
+      "scoringVP": 10,
+      "fourVPWeeks": 4,
+      "zeroVPWeeks": 3,
+      "averageScoringRank": 4.78,
+      "averageWeeklyVP": 2.22,
+      "weeklyVP": [
+        4,
+        4,
+        3,
+        0,
+        1,
+        4,
+        0,
+        4,
+        0
+      ],
+      "weeklyScores": [
+        201.22,
+        207.26,
+        155.44,
+        132.62,
+        159.86,
+        169.0,
+        117.2,
+        188.34,
+        121.42
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 4,
+          "vpRank": 1
+        },
+        {
+          "week": 2,
+          "vp": 8,
+          "vpRank": 1
+        },
+        {
+          "week": 3,
+          "vp": 11,
+          "vpRank": 2
+        },
+        {
+          "week": 4,
+          "vp": 11,
+          "vpRank": 2
+        },
+        {
+          "week": 5,
+          "vp": 12,
+          "vpRank": 4
+        },
+        {
+          "week": 6,
+          "vp": 16,
+          "vpRank": 3
+        },
+        {
+          "week": 7,
+          "vp": 16,
+          "vpRank": 3
+        },
+        {
+          "week": 8,
+          "vp": 20,
+          "vpRank": 2
+        },
+        {
+          "week": 9,
+          "vp": 20,
+          "vpRank": 3
         }
       ]
     },
@@ -278,21 +299,21 @@
       "teamName": "Snow White And The CD Lambs",
       "abbrev": "JRO",
       "logo": "./assets/team-logos/team-5.jpg",
-      "vpRank": 4,
-      "vpRankChange": -2,
-      "totalVP": 17,
-      "record": "4-4",
-      "wins": 4,
+      "vpRank": 3,
+      "vpRankChange": 1,
+      "totalVP": 20,
+      "record": "5-4",
+      "wins": 5,
       "losses": 4,
-      "pointsFor": 1225.98,
-      "pointsAgainst": 1293.5,
+      "pointsFor": 1389.52,
+      "pointsAgainst": 1418.36,
       "pointsForRank": 4,
-      "matchupVP": 8,
-      "scoringVP": 9,
+      "matchupVP": 10,
+      "scoringVP": 10,
       "fourVPWeeks": 3,
       "zeroVPWeeks": 2,
-      "averageScoringRank": 4.38,
-      "averageWeeklyVP": 2.12,
+      "averageScoringRank": 4.33,
+      "averageWeeklyVP": 2.22,
       "weeklyVP": [
         1,
         4,
@@ -301,7 +322,8 @@
         3,
         4,
         0,
-        0
+        0,
+        3
       ],
       "weeklyScores": [
         167.14,
@@ -311,7 +333,8 @@
         150.32,
         181.1,
         127.18,
-        86.66
+        86.66,
+        163.54
       ],
       "rankHistory": [
         {
@@ -353,89 +376,11 @@
           "week": 8,
           "vp": 17,
           "vpRank": 4
-        }
-      ]
-    },
-    {
-      "teamId": 6,
-      "teamName": "Amon-Ra-Punzel",
-      "abbrev": "REGS",
-      "logo": "./assets/team-logos/team-6.svg",
-      "vpRank": 4,
-      "vpRankChange": 1,
-      "totalVP": 17,
-      "record": "6-2",
-      "wins": 6,
-      "losses": 2,
-      "pointsFor": 1120.54,
-      "pointsAgainst": 1044.02,
-      "pointsForRank": 8,
-      "matchupVP": 12,
-      "scoringVP": 5,
-      "fourVPWeeks": 0,
-      "zeroVPWeeks": 1,
-      "averageScoringRank": 6.62,
-      "averageWeeklyVP": 2.12,
-      "weeklyVP": [
-        3,
-        1,
-        3,
-        3,
-        2,
-        3,
-        0,
-        2
-      ],
-      "weeklyScores": [
-        150.08,
-        156.04,
-        155.36,
-        166.68,
-        136.44,
-        128.8,
-        115.8,
-        111.34
-      ],
-      "rankHistory": [
-        {
-          "week": 1,
-          "vp": 3,
-          "vpRank": 4
         },
         {
-          "week": 2,
-          "vp": 4,
-          "vpRank": 5
-        },
-        {
-          "week": 3,
-          "vp": 7,
-          "vpRank": 4
-        },
-        {
-          "week": 4,
-          "vp": 10,
-          "vpRank": 4
-        },
-        {
-          "week": 5,
-          "vp": 12,
-          "vpRank": 4
-        },
-        {
-          "week": 6,
-          "vp": 15,
-          "vpRank": 4
-        },
-        {
-          "week": 7,
-          "vp": 15,
-          "vpRank": 5
-        },
-        {
-          "week": 8,
-          "vp": 17,
-          "vpRank": 4
+          "week": 9,
+          "vp": 20,
+          "vpRank": 3
         }
       ]
     },
@@ -444,21 +389,21 @@
       "teamName": "Tommy Too Tangled",
       "abbrev": "TTT",
       "logo": "./assets/team-logos/team-2.jpg",
-      "vpRank": 6,
-      "vpRankChange": 0,
-      "totalVP": 15,
-      "record": "3-5",
-      "wins": 3,
+      "vpRank": 5,
+      "vpRankChange": 1,
+      "totalVP": 19,
+      "record": "4-5",
+      "wins": 4,
       "losses": 5,
-      "pointsFor": 1223.02,
-      "pointsAgainst": 1220.84,
-      "pointsForRank": 5,
-      "matchupVP": 6,
-      "scoringVP": 9,
-      "fourVPWeeks": 3,
+      "pointsFor": 1394.4,
+      "pointsAgainst": 1342.26,
+      "pointsForRank": 3,
+      "matchupVP": 8,
+      "scoringVP": 11,
+      "fourVPWeeks": 4,
       "zeroVPWeeks": 2,
-      "averageScoringRank": 4.88,
-      "averageWeeklyVP": 1.88,
+      "averageScoringRank": 4.67,
+      "averageWeeklyVP": 2.11,
       "weeklyVP": [
         1,
         1,
@@ -467,7 +412,8 @@
         4,
         0,
         4,
-        1
+        1,
+        4
       ],
       "weeklyScores": [
         146.06,
@@ -477,7 +423,8 @@
         227.7,
         115.32,
         152.54,
-        140.16
+        140.16,
+        171.38
       ],
       "rankHistory": [
         {
@@ -519,6 +466,101 @@
           "week": 8,
           "vp": 15,
           "vpRank": 6
+        },
+        {
+          "week": 9,
+          "vp": 19,
+          "vpRank": 5
+        }
+      ]
+    },
+    {
+      "teamId": 6,
+      "teamName": "Amon-Ra-Punzel",
+      "abbrev": "REGS",
+      "logo": "./assets/team-logos/team-6.svg",
+      "vpRank": 6,
+      "vpRankChange": -2,
+      "totalVP": 18,
+      "record": "6-3",
+      "wins": 6,
+      "losses": 3,
+      "pointsFor": 1279.86,
+      "pointsAgainst": 1220.54,
+      "pointsForRank": 8,
+      "matchupVP": 12,
+      "scoringVP": 6,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 1,
+      "averageScoringRank": 6.44,
+      "averageWeeklyVP": 2.0,
+      "weeklyVP": [
+        3,
+        1,
+        3,
+        3,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "weeklyScores": [
+        150.08,
+        156.04,
+        155.36,
+        166.68,
+        136.44,
+        128.8,
+        115.8,
+        111.34,
+        159.32
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 3,
+          "vpRank": 4
+        },
+        {
+          "week": 2,
+          "vp": 4,
+          "vpRank": 5
+        },
+        {
+          "week": 3,
+          "vp": 7,
+          "vpRank": 4
+        },
+        {
+          "week": 4,
+          "vp": 10,
+          "vpRank": 4
+        },
+        {
+          "week": 5,
+          "vp": 12,
+          "vpRank": 4
+        },
+        {
+          "week": 6,
+          "vp": 15,
+          "vpRank": 4
+        },
+        {
+          "week": 7,
+          "vp": 15,
+          "vpRank": 5
+        },
+        {
+          "week": 8,
+          "vp": 17,
+          "vpRank": 4
+        },
+        {
+          "week": 9,
+          "vp": 18,
+          "vpRank": 6
         }
       ]
     },
@@ -529,19 +571,19 @@
       "logo": "./assets/team-logos/team-1.jpg",
       "vpRank": 7,
       "vpRankChange": 0,
-      "totalVP": 13,
-      "record": "3-5",
-      "wins": 3,
+      "totalVP": 17,
+      "record": "4-5",
+      "wins": 4,
       "losses": 5,
-      "pointsFor": 1200.26,
-      "pointsAgainst": 1342.88,
+      "pointsFor": 1376.78,
+      "pointsAgainst": 1502.2,
       "pointsForRank": 6,
-      "matchupVP": 6,
-      "scoringVP": 7,
-      "fourVPWeeks": 1,
+      "matchupVP": 8,
+      "scoringVP": 9,
+      "fourVPWeeks": 2,
       "zeroVPWeeks": 2,
-      "averageScoringRank": 5.38,
-      "averageWeeklyVP": 1.62,
+      "averageScoringRank": 5.0,
+      "averageWeeklyVP": 1.89,
       "weeklyVP": [
         0,
         2,
@@ -550,7 +592,8 @@
         1,
         1,
         4,
-        2
+        2,
+        4
       ],
       "weeklyScores": [
         139.5,
@@ -560,7 +603,8 @@
         171.42,
         132.62,
         151.74,
-        165.76
+        165.76,
+        176.52
       ],
       "rankHistory": [
         {
@@ -602,89 +646,11 @@
           "week": 8,
           "vp": 13,
           "vpRank": 7
-        }
-      ]
-    },
-    {
-      "teamId": 10,
-      "teamName": "Moana Money, Moana Problems",
-      "abbrev": "JKol",
-      "logo": "./assets/team-logos/team-10.jpg",
-      "vpRank": 8,
-      "vpRankChange": 1,
-      "totalVP": 11,
-      "record": "4-4",
-      "wins": 4,
-      "losses": 4,
-      "pointsFor": 1051.14,
-      "pointsAgainst": 1069.42,
-      "pointsForRank": 9,
-      "matchupVP": 8,
-      "scoringVP": 3,
-      "fourVPWeeks": 0,
-      "zeroVPWeeks": 4,
-      "averageScoringRank": 7.38,
-      "averageWeeklyVP": 1.38,
-      "weeklyVP": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        3,
-        3,
-        3
-      ],
-      "weeklyScores": [
-        128.88,
-        107.2,
-        113.72,
-        125.02,
-        135.76,
-        153.3,
-        138.74,
-        148.52
-      ],
-      "rankHistory": [
-        {
-          "week": 1,
-          "vp": 2,
-          "vpRank": 5
         },
         {
-          "week": 2,
-          "vp": 2,
-          "vpRank": 6
-        },
-        {
-          "week": 3,
-          "vp": 2,
+          "week": 9,
+          "vp": 17,
           "vpRank": 7
-        },
-        {
-          "week": 4,
-          "vp": 2,
-          "vpRank": 9
-        },
-        {
-          "week": 5,
-          "vp": 2,
-          "vpRank": 10
-        },
-        {
-          "week": 6,
-          "vp": 5,
-          "vpRank": 8
-        },
-        {
-          "week": 7,
-          "vp": 8,
-          "vpRank": 9
-        },
-        {
-          "week": 8,
-          "vp": 11,
-          "vpRank": 8
         }
       ]
     },
@@ -693,21 +659,21 @@
       "teamName": "The Little Mer-Maye",
       "abbrev": "RonB",
       "logo": "./assets/team-logos/team-3.jpg",
-      "vpRank": 9,
-      "vpRankChange": -1,
-      "totalVP": 9,
-      "record": "2-6",
-      "wins": 2,
+      "vpRank": 8,
+      "vpRankChange": 1,
+      "totalVP": 12,
+      "record": "3-6",
+      "wins": 3,
       "losses": 6,
-      "pointsFor": 1162.16,
-      "pointsAgainst": 1320.36,
+      "pointsFor": 1306.62,
+      "pointsAgainst": 1439.74,
       "pointsForRank": 7,
-      "matchupVP": 4,
-      "scoringVP": 5,
+      "matchupVP": 6,
+      "scoringVP": 6,
       "fourVPWeeks": 2,
       "zeroVPWeeks": 5,
-      "averageScoringRank": 5.75,
-      "averageWeeklyVP": 1.12,
+      "averageScoringRank": 5.78,
+      "averageWeeklyVP": 1.33,
       "weeklyVP": [
         0,
         0,
@@ -716,7 +682,8 @@
         4,
         0,
         4,
-        0
+        0,
+        3
       ],
       "weeklyScores": [
         125.62,
@@ -726,7 +693,8 @@
         178.9,
         125.52,
         170.52,
-        123.36
+        123.36,
+        144.46
       ],
       "rankHistory": [
         {
@@ -768,6 +736,101 @@
           "week": 8,
           "vp": 9,
           "vpRank": 9
+        },
+        {
+          "week": 9,
+          "vp": 12,
+          "vpRank": 8
+        }
+      ]
+    },
+    {
+      "teamId": 10,
+      "teamName": "Moana Money, Moana Problems",
+      "abbrev": "JKol",
+      "logo": "./assets/team-logos/team-10.jpg",
+      "vpRank": 9,
+      "vpRankChange": -1,
+      "totalVP": 11,
+      "record": "4-5",
+      "wins": 4,
+      "losses": 5,
+      "pointsFor": 1170.52,
+      "pointsAgainst": 1213.88,
+      "pointsForRank": 9,
+      "matchupVP": 8,
+      "scoringVP": 3,
+      "fourVPWeeks": 0,
+      "zeroVPWeeks": 5,
+      "averageScoringRank": 7.67,
+      "averageWeeklyVP": 1.22,
+      "weeklyVP": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      "weeklyScores": [
+        128.88,
+        107.2,
+        113.72,
+        125.02,
+        135.76,
+        153.3,
+        138.74,
+        148.52,
+        119.38
+      ],
+      "rankHistory": [
+        {
+          "week": 1,
+          "vp": 2,
+          "vpRank": 5
+        },
+        {
+          "week": 2,
+          "vp": 2,
+          "vpRank": 6
+        },
+        {
+          "week": 3,
+          "vp": 2,
+          "vpRank": 7
+        },
+        {
+          "week": 4,
+          "vp": 2,
+          "vpRank": 9
+        },
+        {
+          "week": 5,
+          "vp": 2,
+          "vpRank": 10
+        },
+        {
+          "week": 6,
+          "vp": 5,
+          "vpRank": 8
+        },
+        {
+          "week": 7,
+          "vp": 8,
+          "vpRank": 9
+        },
+        {
+          "week": 8,
+          "vp": 11,
+          "vpRank": 8
+        },
+        {
+          "week": 9,
+          "vp": 11,
+          "vpRank": 9
         }
       ]
     },
@@ -779,18 +842,18 @@
       "vpRank": 10,
       "vpRankChange": 0,
       "totalVP": 8,
-      "record": "2-6",
+      "record": "2-7",
       "wins": 2,
-      "losses": 6,
-      "pointsFor": 1022.76,
-      "pointsAgainst": 1251.58,
+      "losses": 7,
+      "pointsFor": 1147.62,
+      "pointsAgainst": 1415.12,
       "pointsForRank": 10,
       "matchupVP": 4,
       "scoringVP": 4,
       "fourVPWeeks": 1,
-      "zeroVPWeeks": 5,
-      "averageScoringRank": 7.38,
-      "averageWeeklyVP": 1.0,
+      "zeroVPWeeks": 6,
+      "averageScoringRank": 7.44,
+      "averageWeeklyVP": 0.89,
       "weeklyVP": [
         0,
         0,
@@ -799,7 +862,8 @@
         0,
         0,
         1,
-        3
+        3,
+        0
       ],
       "weeklyScores": [
         116.14,
@@ -809,7 +873,8 @@
         114.96,
         103.06,
         143.26,
-        146.12
+        146.12,
+        124.86
       ],
       "rankHistory": [
         {
@@ -849,6 +914,11 @@
         },
         {
           "week": 8,
+          "vp": 8,
+          "vpRank": 10
+        },
+        {
+          "week": 9,
           "vp": 8,
           "vpRank": 10
         }
@@ -2309,6 +2379,188 @@
           "weeklyVP": 0,
           "cumulativeVP": 22,
           "cumulativeVPRank": 1
+        }
+      ]
+    },
+    {
+      "leagueId": 1289630,
+      "season": 2026,
+      "week": 9,
+      "top3Cutoff": 171.38,
+      "top6Cutoff": 144.46,
+      "matchupVPTotal": 10,
+      "scoringVPTotal": 9,
+      "leagueVPTotal": 19,
+      "teams": [
+        {
+          "teamId": 4,
+          "teamName": "Burrow and the Beast",
+          "abbrev": "BtB",
+          "logo": "./assets/team-logos/team-4.jpg",
+          "points": 190.44,
+          "opponentId": 11,
+          "opponentName": "Titoana",
+          "opponentPoints": 130.86,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 1,
+          "scoringVP": 2,
+          "weeklyVP": 4,
+          "cumulativeVP": 24,
+          "cumulativeVPRank": 1
+        },
+        {
+          "teamId": 1,
+          "teamName": "The Magic Carpet Eaters",
+          "abbrev": "TMCM",
+          "logo": "./assets/team-logos/team-1.jpg",
+          "points": 176.52,
+          "opponentId": 6,
+          "opponentName": "Amon-Ra-Punzel",
+          "opponentPoints": 159.32,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 2,
+          "scoringVP": 2,
+          "weeklyVP": 4,
+          "cumulativeVP": 17,
+          "cumulativeVPRank": 7
+        },
+        {
+          "teamId": 2,
+          "teamName": "Tommy Too Tangled",
+          "abbrev": "TTT",
+          "logo": "./assets/team-logos/team-2.jpg",
+          "points": 171.38,
+          "opponentId": 9,
+          "opponentName": "Beauty and the Claude",
+          "opponentPoints": 121.42,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 3,
+          "scoringVP": 2,
+          "weeklyVP": 4,
+          "cumulativeVP": 19,
+          "cumulativeVPRank": 5
+        },
+        {
+          "teamId": 5,
+          "teamName": "Snow White And The CD Lambs",
+          "abbrev": "JRO",
+          "logo": "./assets/team-logos/team-5.jpg",
+          "points": 163.54,
+          "opponentId": 8,
+          "opponentName": "Bo-laf's Warm Hugs",
+          "opponentPoints": 124.86,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 4,
+          "scoringVP": 1,
+          "weeklyVP": 3,
+          "cumulativeVP": 20,
+          "cumulativeVPRank": 3
+        },
+        {
+          "teamId": 6,
+          "teamName": "Amon-Ra-Punzel",
+          "abbrev": "REGS",
+          "logo": "./assets/team-logos/team-6.svg",
+          "points": 159.32,
+          "opponentId": 1,
+          "opponentName": "The Magic Carpet Eaters",
+          "opponentPoints": 176.52,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 5,
+          "scoringVP": 1,
+          "weeklyVP": 1,
+          "cumulativeVP": 18,
+          "cumulativeVPRank": 6
+        },
+        {
+          "teamId": 3,
+          "teamName": "The Little Mer-Maye",
+          "abbrev": "RonB",
+          "logo": "./assets/team-logos/team-3.jpg",
+          "points": 144.46,
+          "opponentId": 10,
+          "opponentName": "Moana Money, Moana Problems",
+          "opponentPoints": 119.38,
+          "result": "W",
+          "matchupVP": 2,
+          "scoringRank": 6,
+          "scoringVP": 1,
+          "weeklyVP": 3,
+          "cumulativeVP": 12,
+          "cumulativeVPRank": 8
+        },
+        {
+          "teamId": 11,
+          "teamName": "Titoana",
+          "abbrev": "Tito",
+          "logo": "./assets/team-logos/team-11.jpg",
+          "points": 130.86,
+          "opponentId": 4,
+          "opponentName": "Burrow and the Beast",
+          "opponentPoints": 190.44,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 7,
+          "scoringVP": 0,
+          "weeklyVP": 0,
+          "cumulativeVP": 22,
+          "cumulativeVPRank": 2
+        },
+        {
+          "teamId": 8,
+          "teamName": "Bo-laf's Warm Hugs",
+          "abbrev": "NIX",
+          "logo": "./assets/team-logos/team-8.jpg",
+          "points": 124.86,
+          "opponentId": 5,
+          "opponentName": "Snow White And The CD Lambs",
+          "opponentPoints": 163.54,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 8,
+          "scoringVP": 0,
+          "weeklyVP": 0,
+          "cumulativeVP": 8,
+          "cumulativeVPRank": 10
+        },
+        {
+          "teamId": 9,
+          "teamName": "Beauty and the Claude",
+          "abbrev": "BUNB",
+          "logo": "./assets/team-logos/team-9.jpg",
+          "points": 121.42,
+          "opponentId": 2,
+          "opponentName": "Tommy Too Tangled",
+          "opponentPoints": 171.38,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 9,
+          "scoringVP": 0,
+          "weeklyVP": 0,
+          "cumulativeVP": 20,
+          "cumulativeVPRank": 3
+        },
+        {
+          "teamId": 10,
+          "teamName": "Moana Money, Moana Problems",
+          "abbrev": "JKol",
+          "logo": "./assets/team-logos/team-10.jpg",
+          "points": 119.38,
+          "opponentId": 3,
+          "opponentName": "The Little Mer-Maye",
+          "opponentPoints": 144.46,
+          "result": "L",
+          "matchupVP": 0,
+          "scoringRank": 10,
+          "scoringVP": 0,
+          "weeklyVP": 0,
+          "cumulativeVP": 11,
+          "cumulativeVPRank": 9
         }
       ]
     }

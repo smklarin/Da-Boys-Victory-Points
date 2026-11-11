@@ -1,5 +1,5 @@
 name: ESPN Data Pipeline
-# On-demand refresh requested November 3, 2026.
+# Tuesday schedule enabled November 10, 2026; push triggers Week 9 refresh.
 
 on:
   push:
@@ -10,16 +10,16 @@ on:
       - 'scripts/process_season.py'
       - 'scripts/cache_team_logos.py'
   schedule:
-    # Multiple retry slots during the 7 AM Central hour.
+    # Multiple Tuesday retry slots during the 7 AM Central hour.
     # 12 UTC is 7 AM CDT; 13 UTC is 7 AM CST.
-    - cron: '7 12 * * 3'
-    - cron: '22 12 * * 3'
-    - cron: '37 12 * * 3'
-    - cron: '52 12 * * 3'
-    - cron: '7 13 * * 3'
-    - cron: '22 13 * * 3'
-    - cron: '37 13 * * 3'
-    - cron: '52 13 * * 3'
+    - cron: '7 12 * * 2'
+    - cron: '22 12 * * 2'
+    - cron: '37 12 * * 2'
+    - cron: '52 12 * * 2'
+    - cron: '7 13 * * 2'
+    - cron: '22 13 * * 2'
+    - cron: '37 13 * * 2'
+    - cron: '52 13 * * 2'
   workflow_dispatch:
 
 permissions:

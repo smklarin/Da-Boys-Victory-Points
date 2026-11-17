@@ -1,5 +1,5 @@
 name: ESPN Data Pipeline
-# Tuesday schedule enabled November 10, 2026; push triggers Week 9 refresh.
+# Manual Week 10 refresh requested November 17, 2026; Tuesday schedule retained.
 
 on:
   push:
